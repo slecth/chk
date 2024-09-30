@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo sed -i 's/--port 2053/--port 2052/; s/ --ssl//' /etc/systemd/system/checkuser.service
+sudo systemctl daemon-reload
+sudo systemctl restart checkuser.service
